@@ -208,6 +208,9 @@ typedef struct { raw_adc_t value; celsius_t celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(1000) // Custom
   constexpr temp_entry_t temptable_1000[] PROGMEM = { { 0, 0 } };
 #endif
+#if ANY_THERMISTOR_IS(10000) // beta25 = 4092 K, R25 = 100 kOhm, Pull-up = 4.7 kOhm, "EPCOS" CUSTOM Lookup Table by Patrick Blackman Sphaier
+  #include "thermistor_10000.h"
+#endif
 
 #define _TT_NAME(_N) temptable_ ## _N
 #define TT_NAME(_N) _TT_NAME(_N)

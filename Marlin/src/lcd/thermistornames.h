@@ -151,4 +151,8 @@
 #elif THERMISTOR_ID == 1000
   #define THERMISTOR_NAME "Custom"
 
+// Custom Thermistor by Patrick Blackman Sphaier
+#elif THERMISTOR_ID == 10000
+  #define THERMISTOR_NAME "EPCOS 100K CUSTOM PBLACKMAN"
+
 #endif // THERMISTOR_ID
